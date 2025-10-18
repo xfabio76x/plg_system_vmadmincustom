@@ -1,0 +1,89 @@
+/**
+ * VirtueMart Admin Custom Fields - CSS
+ * Version 3.9
+ * Autore: Fabio + ChatGPT
+ */
+
+/* Titolo del gruppo */
+.uk-text-bold {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Icona freccia apri/chiudi */
+.vmcf-toggle {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1;
+    opacity: 0.8;
+    transition: transform 0.2s ease;
+}
+.vmuikit-js-removable:not(.collapsed) .vmcf-toggle {
+    transform: rotate(90deg);
+}
+
+/* Barra pulsanti globali */
+.vmcf-toolbar {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Pulsanti */
+.vmcf-toolbar .uk-button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+}
+
+/* Effetto hover leggero per freccia */
+.uk-text-bold:hover .vmcf-toggle {
+    opacity: 1;
+}
+
+/* nasconde i figli quando il gruppo è collassato */
+.vmuikit-js-removable.collapsed + .vmuikit-js-removable {
+    display: none;
+}
+
+/* icona: ruota quando "aperto" */
+.vmcf-toggle {
+    transition: transform 0.2s ease;
+    display: inline-flex;
+}
+.vmcf-toggle.is-open {
+    transform: rotate(90deg);
+}
+
+/* toolbar globale */
+.vmcf-toolbar {
+    display: flex;
+    align-items: center;
+}
+
+/* ====== HEADER DEL GRUPPO (la riga con la freccia e il titolo) ====== */
+li.vmuikit-js-removable.group-header{
+    border-bottom: 2px solid #1e87f3;
+    background: #fff;
+}
+/* testo e icona più evidenti */
+.vmuikit-js-removable.group-header .uk-text-bold {
+    color: #222;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+/* icona freccia */
+.vmuikit-js-removable.group-header .vmcf-toggle {
+    color: #666;
+    margin-right: 6px;
+}
+
+/* quando il gruppo è aperto, magari un leggero colore diverso */
+.vmuikit-js-removable.group-header.is-open {
+    background-color: #eaeaea;
+}

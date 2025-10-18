@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" group="system" method="upgrade" version="5.0">
+    <name>PLG_SYSTEM_VMADMINCUSTOM</name>
+    <author>Fabio Cornero</author>
+    <creationDate>2025-10-17</creationDate>
+    <copyright>(C) 2025 Fabio Cornero</copyright>
+    <license>GNU General Public License version 3 or later</license>
+    <version>3.9 Final</version>
+    <description>PLG_SYSTEM_VMADMINCUSTOM_DESC</description>
+
+    <!-- 🔹 FILES del plugin -->
+    <files>
+        <filename plugin="vmadmincustom">vmadmincustom.php</filename>
+        <folder>language</folder>
+        <folder>media</folder>
+    </files>
+
+    <!-- 🔹 Copia automatica della cartella /media/plg_system_vmadmincustom/ -->
+    <media
+    destination="plg_system_vmadmincustom"
+    folder="media/plg_system_vmadmincustom">
+    </media>    
+    <!-- 🔹 Lingue -->
+    <languages folder="language">
+        <language
+      tag="en-GB">en-GB/en-GB.plg_system_vmadmincustom.ini</language>
+        <language
+      tag="en-GB">en-GB/en-GB.plg_system_vmadmincustom.sys.ini</language>
+        <language
+      tag="it-IT">it-IT/it-IT.plg_system_vmadmincustom.ini</language>
+        <language
+      tag="it-IT">it-IT/it-IT.plg_system_vmadmincustom.sys.ini</language>
+    </languages>
+
+    <!-- 🔹 Parametri -->
+    <config>
+        <fields name="params">
+            <fieldset
+        name="basic"
+        label="PLG_SYSTEM_VMADMINCUSTOM_FIELDSET_BASIC">
+
+                <field
+          name="open_default"
+          type="radio"
+          default="0"
+          label="PLG_SYSTEM_VMADMINCUSTOM_OPEN_DEFAULT_LABEL"
+          description="PLG_SYSTEM_VMADMINCUSTOM_OPEN_DEFAULT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+          name="remember_state"
+          type="radio"
+          default="1"
+          label="PLG_SYSTEM_VMADMINCUSTOM_REMEMBER_STATE_LABEL"
+          description="PLG_SYSTEM_VMADMINCUSTOM_REMEMBER_STATE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+          name="persist_state"
+          type="radio"
+          default="0"
+          label="PLG_SYSTEM_VMADMINCUSTOM_PERSIST_STATE_LABEL"
+          description="PLG_SYSTEM_VMADMINCUSTOM_PERSIST_STATE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+          name="show_global_buttons"
+          type="radio"
+          default="1"
+          label="PLG_SYSTEM_VMADMINCUSTOM_SHOW_BUTTONS_LABEL"
+          description="PLG_SYSTEM_VMADMINCUSTOM_SHOW_BUTTONS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+          name="auto_close_groups"
+          type="radio"
+          default="1"
+          label="PLG_SYSTEM_VMADMINCUSTOM_AUTO_CLOSE_LABEL"
+          description="PLG_SYSTEM_VMADMINCUSTOM_AUTO_CLOSE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+          name="auto_open_invalid"
+          type="radio"
+          default="1"
+          label="PLG_SYSTEM_VMADMINCUSTOM_AUTO_OPEN_INVALID_LABEL"
+          description="PLG_SYSTEM_VMADMINCUSTOM_AUTO_OPEN_INVALID_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>
