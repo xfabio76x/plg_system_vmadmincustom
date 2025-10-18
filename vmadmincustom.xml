@@ -16,10 +16,10 @@
     </files>
 
     <!-- 🔹 Copia automatica della cartella /media/plg_system_vmadmincustom/ -->
-    <media
-    destination="plg_system_vmadmincustom"
-    folder="media/plg_system_vmadmincustom">
-    </media>    
+   <media>
+    <folder>media</folder>
+    <destination>plg_system_vmadmincustom</destination>
+</media>
     <!-- 🔹 Lingue -->
     <languages folder="language">
         <language
